@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebHookRegister</name>
+    </assembly>
+    <members>
+        <member name="M:WebHookRegister.Infra.Extensions.SwaggerServicesExtension.AddSwaggerDocumentation(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add swagger documentation service on dependency injection container 
+            </summary>
+        </member>
+    </members>
+</doc>

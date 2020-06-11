@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  webhookregister:
+    image: ${DOCKER_REGISTRY-}webhookregister
+    build:
+      context: .
+      dockerfile: WebHookRegister/Dockerfile
+    depends_on: 
+      - db
+    
+  db:
+    image: microsoft/mssql-server-linux    
+    volumes:
+      - mssql-server-linux-data:/var/opt/mssql/data
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssword123456
+    ports:
+      - "1433:1433"
+  
+volumes:
+  mssql-server-linux-data:
